@@ -1,0 +1,40 @@
+/* 
+* {
+    background-color: rgb(226, 215, 213);
+    box-sizing: border-box;
+} */
+
+* {
+    box-sizing: border-box;
+    background-color: rgb(226, 215, 213);
+}
+
+
+p {
+    /* border-color: red;
+    border-width: 2px;
+    border-style: dotted; */
+
+    /* shorthand for what we did above */
+    border: red 2px dotted;
+    padding-left: 20px;
+    /* margin-top: 0px;
+    margin-bottom: 50px; */
+
+    /* top right bottom left */
+    margin: 0px 50px 0px 50px;
+
+
+    height: 50px;
+}
+
+.box {
+    height: 300px;
+    width: 300px;
+    border: 20px dashed aliceblue;
+    background-color: rgb(83, 132, 35);
+    padding: 20px;
+    margin: 50px;
+    /* box-sizing: border-box; */
+    /* margin: 50px; */
+}
