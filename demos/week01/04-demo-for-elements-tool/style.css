@@ -1,0 +1,38 @@
+img {
+    height: 100px;
+    width: 100px;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333333;
+
+  }
+  h1 {
+    color: #b83232;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    /* font-weight: bold; */
+  }
+  h2 {
+    color: #333333;
+    font-family: Arial, sans-serif;
+  }
+  p {
+    color: #222222;
+    font-family: Arial, sans-serif;
+  }
+  a {
+    color: #b83232;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #ff6633;
+  }
+
+
+
+  .article p:first-child {
+    color: tomato;
+  }

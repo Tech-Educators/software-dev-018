@@ -1,0 +1,47 @@
+
+
+/* flexbox is a layout module */
+/* one dimensional layout module */
+/* grid is the one  */
+
+.box {height: 200px; width: 200px;}
+.one {background-color: #A4243B;}
+.two {background-color: #d8c99b;}
+.three{background-color: #D8973C;}
+.four{background-color: #BD632F;}
+.five{background-color: #273E47;}
+
+
+.flex-container {
+    background-color: black;
+    /* how to intialize flexbox */
+    display: flex;
+    height: 800px;
+    width: 1800px;
+
+    /* controls the main axis */
+    /* flex-direction: row; */
+
+    /* allows the children to wrap around if they don't enough room in the container */
+    /* flex-wrap: nowrap; */
+
+}
+
+
+/* 
+
+If our flex direction is :row 
+
+main axis - horizontal
+cross - vertical
+
+if our flex direction is :column
+
+man axis - vertical
+cross - horizonal 
+
+justify-content - is used to spread items along the main axis
+
+align-items - use to spread along the corss axis
+
+*/

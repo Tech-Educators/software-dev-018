@@ -38,3 +38,10 @@ p {
     /* box-sizing: border-box; */
     /* margin: 50px; */
 }
+
+.src {
+    height: 260px;
+    width: 260px;
+    padding: 20px;
+    border: 20px red solid;
+}
