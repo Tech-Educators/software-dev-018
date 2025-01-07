@@ -1,0 +1,62 @@
+/* THis is where I'll do styles*/
+
+/* Element styling - will affect all matching elements on the page*/
+
+/* Select all elements */
+* {
+    color: white;
+}
+
+li {
+    color: firebrick;
+    background-color: aliceblue;
+}
+
+/* Styling a class */
+
+.special-item {
+    color: dodgerblue;
+    background-color: grey;
+}
+
+/* Selecting multiple elements in one go */
+h2, p {
+    font-family: monospace;
+}
+
+
+/* selects any p tags that are a decended of the cool-section */
+.cool-section p {
+    color: tomato;
+    font-size: 32px;
+}
+
+/*  selects only direct children of cool-section - decendents are not affected */
+.cool-section > p {
+    color: rgb(50, 111, 210);
+    font-size: 32px;
+}
+
+/* How I like to maanage my css */
+
+
+.fantasy {
+    font-family: fantasy;
+    color: purple;
+}
+
+/* psudo selector */
+/* when anything with the fantasy class is hovered over, give it these styles */
+.fantasy:hover {
+    color: rgb(11, 250, 115)
+}
+
+.text-v-big {
+    font-size: 38px;
+}
+
+.text-normal {
+    font-size: 16px;
+}
+
+
