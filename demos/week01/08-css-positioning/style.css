@@ -1,0 +1,95 @@
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: grey;
+    font-family: monospace;
+    font-size: 26px;
+}
+
+/* This is the default for all elements */
+.static {
+    position: static;
+
+    /* This doesn't do anything, because the setting it not allowed when the position is set to static */
+    left: 250px;
+}
+
+
+.absolute {
+    position: absolute;
+
+    /* When we change the position property to anythign that isn't 'static' , we now have access to top, left, bottom and right settings */
+    right: 200px;
+    top: 200px;
+    /* Top always win the battle for what will be applied */
+    /*  */
+    z-index: -100px;
+}
+
+
+/* kinda works like position abosolute, but the space the element orginallny took up (when in position : static) is reserved/and still affects/is affected by the other elements. */
+.relative {
+    position: relative;
+    bottom: 540px;
+    left: 250px;
+}
+
+/* Position sticky is really nice for things like nav bars or annoying banner ads */
+
+/* behavs like a static element - until we hit the bottom/top 'breakpoint' */
+/* It does reserve the intial space in the document flow */
+
+.sticky {
+    position: sticky;
+    top: 10px;
+}
+
+/* fixed, just like abosule, is removed from the 'document - flow' and is sent to the shadow-relm - however, it's positioned always in the viewport, and when the user scrolls it will remained 'fixed' in it's positoin */
+.fixed {
+    position: fixed;
+    left: 240px;
+    top: 110px;
+}
+
+
+.parent-box {
+    height: 300px;
+    width: 300px;
+
+    background-color: tomato;
+}
+
+.child-box {
+    height: 40px;
+    width: 40px;
+    border: ridge 2px white;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+
+.tree {
+    background-image: url('https://images.unsplash.com/photo-1482148454461-aaedae4b30bb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.america {
+    background-image: url('https://images.unsplash.com/photo-1498855926480-d98e83099315?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.beach {
+    background-image: url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=2788&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.snow {
+    background-image: url('https://images.unsplash.com/photo-1418985991508-e47386d96a71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
+
+.flower {
+    background-image: url('https://images.unsplash.com/photo-1618468355232-88a329df0182?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+}
