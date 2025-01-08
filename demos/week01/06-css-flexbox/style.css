@@ -4,7 +4,7 @@
 /* one dimensional layout module */
 /* grid is the one  */
 
-.box {height: 200px; width: 200px;}
+.box {height: 100px; width: 100px;}
 .one {background-color: #A4243B;}
 .two {background-color: #d8c99b;}
 .three{background-color: #D8973C;}
@@ -16,8 +16,9 @@
     background-color: black;
     /* how to intialize flexbox */
     display: flex;
-    height: 800px;
-    width: 1800px;
+    height: 700px;
+    width: 1200px;
+    position: relative;
 
     /* controls the main axis */
     /* flex-direction: row; */
@@ -45,3 +46,22 @@ justify-content - is used to spread items along the main axis
 align-items - use to spread along the corss axis
 
 */
+
+
+.main {
+    height: 2px;
+    width: 1200px;
+    background-color: red;
+    position: absolute;
+    top: 350px;
+    color: white;
+}
+
+.cross {
+    width: 2px;
+    height: 700px;
+    background-color: red;
+    position: absolute;
+    left: 550px;
+    color: white;
+}
