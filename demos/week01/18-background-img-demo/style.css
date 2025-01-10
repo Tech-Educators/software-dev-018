@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* all of my divs have this feature class because it controls sizing, and all my divs need the same sizing */
+
+.feature {
+    /* viewport height */
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* this is just about applying the color */
+
+.crane {
+    background-image: url('https://images.unsplash.com/photo-1514069709437-f1c294e44e1a?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.digger {
+    background-image: url('https://images.unsplash.com/photo-1505833464198-4993b36cdfab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+}
+
+/* How to use a local image */
+.worker {
+   background-image: url('./images/workers.jpg');
+}
