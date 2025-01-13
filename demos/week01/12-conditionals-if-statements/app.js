@@ -61,3 +61,16 @@ if (time < 12) {
     // if none of the other conditions are true, it hits this else statment
     console.log('That is not a time!')
 }
+
+
+
+
+if (5 === 5) {
+    console.log('Hello')
+}
+
+
+if (true) {
+}
+
+console.log('This is outside the if statment so it executes always')

@@ -1,5 +1,6 @@
-body {
+* {
     margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -11,6 +12,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    position: relative;
 }
 
 
@@ -27,4 +30,19 @@ body {
 /* How to use a local image */
 .worker {
    background-image: url('./images/workers.jpg');
+}
+
+header {
+    position: fixed;
+    display: flex;
+}
+
+nav {
+    display: flex;
+}
+
+.section {
+    position: relative;
+    left: 70px;
+    top: 470px;
 }
