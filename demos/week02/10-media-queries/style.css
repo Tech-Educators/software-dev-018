@@ -1,0 +1,51 @@
+span {
+    padding-left: 10px;
+}
+
+
+body {
+    background-color: tomato;
+    color:white;
+    font-family: monospace;
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box {
+    height: 500px;
+    width: 500px;
+    background-color: aliceblue;
+}
+
+
+/* when the screen size is above 300px but below 900px i want the bg to be green */
+@media (min-width: 300px) and (max-width: 900px) {
+
+    body {
+        background-color: forestgreen;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+}
+
+
+/* just another way of writing the query */
+@media (300px <= width <= 900px) {
+    .box {
+        width: 50vw;
+    };
+}
+
+@media (max-width: 300px) {
+    .box {
+        width: 150px;
+    }
+}
