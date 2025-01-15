@@ -1,0 +1,70 @@
+header {
+    background-color: #afc97e;
+
+    /* grid-column-start: 2;
+    grid-column-end: 4; */
+
+    /* we can shorten */
+    grid-column: 2 / 4;
+
+    grid-row: 1 / 1;
+}
+
+main {
+    background-color: #ffdf64;
+    grid-row: 2/3;
+    grid-column: 2/4;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+    /* each of the areas we define need to be adjascent */
+    grid-template-areas: 
+    "section1 section1 section1 section1"
+    "section2 foo foo section3"
+    "cat cat cat cat"
+    ;
+
+}
+
+
+
+.intro {
+    grid-area: foo;
+}
+.cats {
+    background-color: tomato;
+    grid-area: cat;
+}
+
+.intro {
+    background-color: #C1DFF0;
+}
+
+h2 {
+    background-color: #877B66;
+    grid-area: section1;
+
+    
+}
+
+footer {
+    background-color: #d4e6b5;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4; 
+}
+
+
+body {
+    height: 100vh;
+    display: grid;
+
+    /* grid-template-columns: 50px 150px 150px 50px; */
+    /* fr means fraction */
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 0.5fr 4fr 0.5fr;
+
+    gap: 20px;
+}
