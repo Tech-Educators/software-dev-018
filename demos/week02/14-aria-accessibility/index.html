@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="app.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://google.com">google.com</a>
+
+    <!-- aria-label:  -->
+     <!-- allows us to provide extra context -->
+    <a href="https://google.com" aria-label="Read more about Sea Otters">Read More</a>
+
+    <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="an image chameleon hiding in flowers" tabindex="0"/>
+
+
+    <!-- assertive means announce it asap -->
+     <!-- aria-live: polite means wait until everything else is done -->
+    <div id="notificationDisplay" aria-live="assertive"> No new notification</div>
+    <button id="notification">generate notification</button>
+
+
+    <!-- allows us to make the elemnt keyboard focusable -->
+    <p tabindex="0">Hellooooo!</p>
+
+
+    <!-- hide elements if they're not meaningful/ only for design -->
+    <button tabindex="-1" aria-hidden="true">🔔</button>
+</body>
+</html>
