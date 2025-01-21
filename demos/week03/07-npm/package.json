@@ -1,0 +1,17 @@
+{
+  "name": "07-npm",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cowsay": "^1.6.0",
+    "roughjs": "^4.6.6"
+  },
+  "type": "module"
+}
