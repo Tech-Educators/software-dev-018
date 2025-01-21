@@ -5,3 +5,7 @@ const notificationButton = document.getElementById('notification')
 notificationButton.addEventListener('click', function() {
     notificationDisplay.innerText = 'New email in your inbox!!'
 })
+
+
+// 0
+// 2

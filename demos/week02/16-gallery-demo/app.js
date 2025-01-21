@@ -1,6 +1,10 @@
 const thumbNailContainer = document.getElementById('thumbNailContainer')
 const displayImage = document.getElementById('displayImage')
 
+const rightButton = document.getElementById('right')
+const leftButton = document.getElementById('lefts')
+
+let currentImageIndex = 0
 
 
 let images = [
@@ -22,7 +26,7 @@ let images = [
 function createThumbnails() {
     // we could use a loop? To create an element for each image object and append to page.
 
-    images.forEach(function (image) {
+    images.forEach(function (image, index) {
         // for each of the objects, create an image tag
         let imageElem = document.createElement('img')
 
@@ -36,6 +40,7 @@ function createThumbnails() {
             console.log(image)
             // when i click on a thumbnail, I'll call 'createBigImage' to set it as the main image
             // pass in the information of the image i clicked on as an argument.
+            currentImageIndex = index
             createBigImage(image)
             
         })
@@ -51,6 +56,7 @@ function createThumbnails() {
 
 createThumbnails()
 
+createBigImage(images[currentImageIndex])
 
 // accept a param of an image object 
 function createBigImage(img) {
@@ -60,4 +66,23 @@ function createBigImage(img) {
     bigImage.src = img.src
     bigImage.alt = img.alt
     displayImage.appendChild(bigImage)
+}
+
+
+rightButton.addEventListener('click', function() {
+    selectNextImage(1)
+})
+
+leftButton.addEventListener('click', function() {
+    selectNextImage(-1)
+})
+
+function selectNextImage(index) {
+    currentImageIndex += index
+
+    // if statements to handle we've gone over the length of the array or under
+
+    console.log(currentImageIndex)
+    createBigImage(images[currentImageIndex])
+    
 }

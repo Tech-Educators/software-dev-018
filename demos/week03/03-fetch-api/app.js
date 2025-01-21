@@ -15,3 +15,14 @@ async function fetchData() {
 }
 
 fetchData()
+
+
+async function fetchGithubData() {
+    const response = await fetch(`https://api.github.com/repos/facebook/react`)
+    const data = await response.json()
+    console.log(data.stargazers_count)
+
+    // display the count the count in a p tag.
+}
+
+fetchGithubData()

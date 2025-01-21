@@ -1,0 +1,78 @@
+## Glossary of Web Development Terms
+
+- **DOM Node**: A single point in the Document Object Model tree (e.g., an element, text, or comment).
+- **Element**: A specific type of DOM node defined by an HTML tag (e.g., `<div>`, `<p>`).
+- **Tag**: A piece of HTML syntax used to mark the start or end of an element (e.g., `<h1>` or `</h1>`).
+- **(Html) Document**: The entire HTML file that browsers read and render on the screen.
+- **Variable**: A named container for storing data values in a program.
+- **Argument**: The actual value passed to a function when it’s called.
+- **Parameters**: The placeholders in a function definition that receive argument values.
+- **Invoke**: Another term for calling or running a function.
+- **Instantiate**: To create a new instance (copy) of a class or object.
+- **Declare**: To introduce a new variable or function in the code so it can be used later.
+- **Expression**: Any piece of code that evaluates to a value.
+- **Statement**: A complete command in a programming language that performs some action.
+- **Scope**: The region of code where a variable or function is accessible.
+- **Return**: The keyword that sends a value back when a function finishes.
+- **Callback Function**: A function passed into another function to be run later.
+- **Anonymous Function**: A function without a name, often used as a callback.
+- **Event Listener**: Code that waits for a specific event (like a click) to happen on an element.
+- **Event Handler**: The function that runs in response to an event.
+- **Arrow Function**: A concise function syntax (`() => {}`) introduced in modern JavaScript.
+- **Control Flow**: The order in which a program’s statements are executed.
+- **Conditional**: An `if` statement or similar structure that chooses different code paths based on a condition.
+- **(for) loop**: A structure that repeats a block of code for a set number of iterations.
+- **Async/Await**: Syntax for writing asynchronous code in a synchronous-looking style.
+- **Asynchronous Code**: Code that doesn’t block the program while waiting for operations (e.g., HTTP requests).
+- **Synchronous Code**: Code that runs line by line, waiting for each step to finish before moving on.
+- **WRRC** (Web Request-Response Cycle): The process where a client sends a request to a server, which sends back a response.
+- **Client**: The browser or device making a request.
+- **Server**: A machine or program that receives requests and sends back responses.
+- **Terminal**: A text-based interface for entering commands on your computer.
+- **Git**: A version control system used to track changes in code.
+- **API** (Application Programming Interface): A set of rules that let software programs talk to each other.
+- **HTTP** (HyperText Transfer Protocol): The protocol for transferring data over the web.
+- **HTTP Verbs**: Methods like GET, POST, PUT, DELETE used for HTTP requests.
+- **Protocols**: Set rules for how data is transmitted (e.g., HTTP, HTTPS).
+- **CSS Rule**: A set of style instructions, usually containing a selector and declarations (e.g., `selector { property: value; }`).
+- **key: value pairs**: Pairs that associate one item (key) with another (value).
+- **Property**: A characteristic in CSS or JavaScript (e.g., `color`, `width`).
+- **Property** (JS Objects): A key-value pair attached to an object. It defines a piece of data that belongs to that object. (e.g, `user.name` means `name` is a property of the user object)
+- **dot notation**: Accessing an object’s property with a dot (e.g., `object.property`).
+- **Method**: A function that is a property of an object.
+- **(Array) Element**: An item in an array.
+- **Index**: The position of an element in an array.
+- **0 Indexed**: Arrays in JavaScript start counting elements at 0.
+- **event object**: An object that has details about the event (e.g., which element was clicked).
+- **Request**: A message sent by the client to the server asking for data or actions.
+- **Response**: A message the server sends back to the client with the requested data or status.
+- **Promise**: An object representing the eventual completion (or failure) of an asynchronous operation.
+- **Media Query**: A CSS technique to apply styles based on device characteristics (screen size, etc.).
+- **DOM Manipulation**: Changing or updating elements on a web page using JavaScript.
+- **DOM API**: Methods and properties provided by the browser to interact with the DOM.
+- **ARIA** (Accessible Rich Internet Applications): Attributes that make web content more accessible.
+- **JSON** (JavaScript Object Notation): A lightweight data format often used for sending data in web apps.
+- **Lighthouse**: A tool by Google that audits webpages for performance, accessibility, and more.
+- **Pure functions**: Functions that return the same output for the same input and have no side effects.
+- **Unit Testing**: Testing individual parts of code (functions, modules) in isolation.
+- **NPM** (Node Package Manager): A tool for installing and managing JavaScript packages.
+- **Library**: A collection of pre-written code that can be used to simplify tasks.
+- **Package**: Bundled code (often distributed via NPM) that can be reused in projects.
+- **Framework**: A larger structure that provides conventions and tools for building applications.
+
+---
+
+## Short Explanations of Inbuilt JavaScript Methods/Functions
+
+- **`document.querySelector(selector)`**: Finds and returns the first DOM element matching the given CSS selector.
+- **`DOMNode.appendChild(childNode)`**: Adds a new child node to the end of a DOM node’s list of children.
+- **`DOMNode.innerText`**: Gets or sets the text inside a DOM element (without HTML tags).
+- **`document.createElement(tagName)`**: Creates a new DOM element node of the specified type.
+- **`fetch(url)`**: Sends a request to the given URL and returns a Promise that resolves to the server’s response. We often write `const response = await fetch()` (you can name `response` whatever you like, but for the sake of consistancty, we'll call this the response object)
+- **`response.json()`**: Reads a response object and returns a Promise that resolves to JSON data. We often write `await response.json()`
+- **`JSON.parse(jsonString)`**: Converts a JSON string into a JavaScript object.
+- **`JSON.stringify(object)`**: Converts a JavaScript object into a JSON string.
+- **`array.push(item)`**: Adds a new item to the end of an array.
+- **`setTimeout(callback, delay)`**: Runs a function (callback) once after a given delay (milliseconds).
+- **`setInterval(callback, interval)`**: Runs a function repeatedly at every given time interval (milliseconds).
+- **`array.forEach(function(element) {})`** - Runs the provided callback function for each element in an array.

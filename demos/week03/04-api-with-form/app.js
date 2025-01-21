@@ -14,6 +14,7 @@ form.addEventListener('submit', function(event) {
 
 async function fetchWordDef(word) {
     // get my response object
+    // fetch comes with JS
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
     // parse the response.body as JSON
     const data = await response.json()
@@ -23,8 +24,12 @@ async function fetchWordDef(word) {
 
 
 function generateUI(data) {
+    // reset the p tag to have no content. 
     displayElem.innerHTML = ''
     console.log(data.meanings[0].definitions[0].definition)
 
     displayElem.innerText = data.meanings[0].definitions[0].definition
 }
+
+
+

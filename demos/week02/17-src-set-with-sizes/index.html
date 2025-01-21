@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <div id="thumbNailContainer"></div>
-    <div id="displayImage"></div>
+    <img srcset="
+    assets/large.jpg 2400w,
+    assets/medium.jpg 1920w,
+    assets/small.jpg 640w
+    "
 
-    <button id="right">right</button>
-    <button id="lefts">left</button>
+    sizes="
+        (min-width: 2000px) 50vw,
+        100vw
+    "
+    />
 </body>
 </html>

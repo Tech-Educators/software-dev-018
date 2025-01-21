@@ -84,8 +84,8 @@ rightButton.addEventListener('click', function() {selectNextImage(1)})
 leftButton.addEventListener('click', function() {selectNextImage(-1)})
 
 window.addEventListener('keydown', function(event) {
-    console.log('Hello')
-    if (event.key == 'ArrowLeft') {
+    console.log(event)
+    if (event.key === 'ArrowLeft') {
         selectNextImage(-1)
     } else if (event.key === 'ArrowRight') {
         selectNextImage(1)

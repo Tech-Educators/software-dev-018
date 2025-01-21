@@ -1,8 +1,9 @@
 const form = document.getElementById('form')
 
-
+const form2 = document.getElementById('form2')
 // listening for a submit event
 // then the callback funciton
+
 form.addEventListener('submit', function(event) {
     // to prevent the page refreshing
     event.preventDefault()
@@ -29,3 +30,28 @@ form.addEventListener('submit', function(event) {
 
 // const array = new Array(3)
 // const array2 = ['','','']
+
+
+function selectNextImage() {
+    2 +                            0
+    currentImageIndex = (currentImageIndex + 1) % images.length
+}
+
+function lastNextImage() {
+
+    2// currentImageIndex
+    2 // last index
+    3 // length of images
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length
+}
+
+4 % 5  // 4
+
+5 % 10 // 5
+
+6 % 10 // 6 0 r6
+
+// 4 left over
+10 % 6 // 4 1r4
+
+10 % 8 // 2
