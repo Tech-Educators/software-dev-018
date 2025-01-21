@@ -1,0 +1,16 @@
+{
+  "name": "08-unit-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "npx vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vitest": "^3.0.2"
+  },
+  "type": "module"
+}
