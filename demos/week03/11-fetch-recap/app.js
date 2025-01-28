@@ -3,6 +3,7 @@ console.log('Hello')
 
 async function fetchData() {
     // await says 'no i really want to wait for our response 'headers' to come back
+    // access this url and store what the server returns
     const unicorns = await fetch(`https://jsonplaceholder.typicode.com/posts`)
     // step 2 -> we're not done 
     const flowers = await unicorns.json()
@@ -11,6 +12,16 @@ async function fetchData() {
 }
 
 fetchData()
+
+
+
+
+
+
+
+
+
+
 
 function generateUI(dataToRender) {
   
