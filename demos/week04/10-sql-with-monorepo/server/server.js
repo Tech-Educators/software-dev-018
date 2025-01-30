@@ -36,6 +36,25 @@ app.get('/jokes', async (req, res) => {
     res.json(jokes)
 })
 
+app.delete('/jokes/:id', async (req, res) => {
+    console.log(req.params.id)
+    const deleted = await db.query(`DELETE FROM jokes WHERE id = $1`, [req.params.id])
+    res.send(req.params.id)
+})
+
+app.put('/jokes/:id', async (req, res) => {
+    console.log(req.params.id, req.body)
+    const update = await db.query(`
+        UPDATE jokes 
+        SET 
+        joke = $1, 
+        punchline = $2 
+        WHERE id = $3`, 
+        [req.body.joke, req.body.punchline, req.params.id]
+    )
+
+    res.json({params:  req.params.id, body: req.body})
+})
 // now a route so I can add a new joke to my database
 // post route
 // i can get the recieved data from the client on the request.body

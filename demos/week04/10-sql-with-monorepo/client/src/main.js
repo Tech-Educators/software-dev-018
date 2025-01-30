@@ -1,24 +1,44 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+const app = document.getElementById('app')
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+async function fetchData() {
+  const res = await fetch(`http://localhost:4242/jokes`)
+  const jokes = await res.json()
 
-setupCounter(document.querySelector('#counter'))
+  displayJokes(jokes)
+}
+
+function displayJokes(param) {
+  // clear the div before we add things 
+  app.innerHTML = ''
+  param.forEach(singleJoke => {
+    const h3 = document.createElement('h3')
+    const pTag = document.createElement('p')
+    const div = document.createElement('div')
+    const deleteButton = document.createElement('button')
+
+    h3.innerText = singleJoke.joke
+    pTag.innerText = singleJoke.punchline
+    deleteButton.innerText = 'X'
+
+    deleteButton.addEventListener('click', function() {
+      handleDelete(singleJoke.id)
+    })
+
+    div.appendChild(deleteButton)
+    div.appendChild(h3)
+    div.appendChild(pTag)
+
+    app.appendChild(div)
+  })
+}
+
+fetchData()
+
+async function handleDelete(id) {
+  const res = await fetch(`http://localhost:4242/jokes/${id}`, {
+    method: 'DELETE'
+  })
+  if (res.ok) {
+    fetchData()
+  }
+}
