@@ -1,16 +1,16 @@
 export default function Animal({animal, fav}) {
 
     // more useful if there is a significant change in the whole component based on a condition. 
-    // if (fav) {
-    //     return (
-    //         <div>
-    //             <p>I love {animal}</p>
-    //             <h2>Fooo</h2>
-    //         </div>
-    //     )
-    // } else {
-    //     return <p>I dont care for {animal}</p>
-    // }
+    if (fav) {
+        return (
+            <div>
+                <p>I love {animal}</p>
+                <h2>Fooo</h2>
+            </div>
+        )
+    } else {
+        return <p>I dont care for {animal}</p>
+    }
 
     // 
     return (
