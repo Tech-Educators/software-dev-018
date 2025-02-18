@@ -2,6 +2,7 @@
 
 import { Link, useParams } from "react-router-dom"
 import { findPlant } from "../stores/plantsInfo"
+import { Outlet } from "react-router-dom"
 
 
 export default function IndividualPlant() {
@@ -17,6 +18,7 @@ export default function IndividualPlant() {
     console.log(plantInfo)
     return (
         <section>
+            <Outlet />
             <Link to='/plants'>back to plants</Link>
             <h2>This is the individual plant page!</h2>
             <img src={plantInfo.image} />
