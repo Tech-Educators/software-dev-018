@@ -6,3 +6,5 @@
                     genres ON book_genres.genre_id = genres.id
                     WHERE books.id = $1
                     GROUP BY books.id
+
+
