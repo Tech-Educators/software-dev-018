@@ -1,5 +1,6 @@
 export default function App() {
 
+  // console.log('Hello')
   const plantSpecies = [
     {
       name: "Rose",

@@ -1,23 +1,27 @@
-export default function Animal({animal, fav}) {
+import { useState } from "react"
+
+export default function Animal({animal}) {
+
+    const [fav, setFav] = useState(false)
 
     // more useful if there is a significant change in the whole component based on a condition. 
-    if (fav) {
-        return (
-            <div>
-                <p>I love {animal}</p>
-                <h2>Fooo</h2>
-            </div>
-        )
-    } else {
-        return <p>I dont care for {animal}</p>
-    }
+    // if (fav) {
+    //     return (
+    //         <div>
+    //             <p>I love {animal}</p>
+    //             <h2>Fooo</h2>
+    //         </div>
+    //     )
+    // } else {
+    //     return <p>I dont care for {animal}</p>
+    // }
 
     // 
     return (
         <>
             <h2>{animal}</h2>
             {/* fav is true? do this : otherside do this */}
-            <p>{fav ? '❤️' : ''}</p>
+            <p onClick={() => {setFav(!fav)}}>{fav ? '❤️' : 'x'}</p>
 
             {/* or we could use the AND logical operator */}
             <p>{fav && 'I love this animal a lot'}</p>

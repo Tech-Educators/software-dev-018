@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react"
 
-export default function Shop() {
-    console.log('running shop')
+export default function Shop({setCPS, cps}) {
+    // console.log('running shop')
     const [upgrades, setUpgrades] = useState([])
 
     useEffect(() => {
@@ -18,6 +18,7 @@ export default function Shop() {
             {upgrades.map((upgrade) => (
                 <div key={upgrade.id}>
                     <p>{upgrade.name}</p>
+                    <button onClick={() => {setCPS(cps + 1); console.log(cps)}}>CPS</button>
                 </div>
             ))}
         </section>

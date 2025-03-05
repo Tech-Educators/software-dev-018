@@ -40,19 +40,3 @@
 .read-the-docs {
   color: #888;
 }
-
-
-.cookieImage {
-  animation: 3s ease-in infinite spin;
-  width: 250px;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  } 
-  to {
-    transform: rotate(360deg);
-  }
-  
-}

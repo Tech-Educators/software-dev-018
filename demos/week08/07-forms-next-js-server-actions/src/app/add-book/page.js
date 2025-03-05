@@ -1,44 +1,50 @@
+import pg from "pg"
 import { revalidatePath } from "next/cache"
-// easy to use the wrong import here
 import { redirect } from "next/navigation"
 
-import pg from "pg"
 export default function Page() {
 
+    // two rules for server acitons: 
+    // they HAVE to have the 'use server' directive at the top of the function
+    // they HAVE to be async
+
+    // you do need to tell your function about it getting formdata in the paramaters
     async function handleSubmit(formData) {
-        // when you have a server action, like handleSubmit
-        // you have to use the 'use server' directive in the function
-        "use server"
-        console.log('running on the server after submit')
-        const db = new pg.Pool({
-            connectionString: process.env.DB_CONN
-        })
-        
-        // turning formData into a normal object
+        'use server'
+        // this is now a server action and will run on our server after form submission
+        console.log(formData)
+
+        // destructing the properies out of the object we made using Object.fromEntries
+        // turing FormData into a normal plain js object and storing in the 'data' variable
         const data = Object.fromEntries(formData)
-        // destructuing the properties out of the 'data' variable
+        // destructuting the 'data' variable to make a new variable for each of it's properties.
         const {title, author, description, quote, released, img_url} = data
 
+        // i'll connect to my database. 
+        const db = new pg.Pool({connectionString: process.env.DB_CONN})
         await db.query(`INSERT INTO books (title, author, description, quote, released, img_url) VALUES ($1, $2, $3, $4, $5, $6)`, [title, author, description, quote, released, img_url])
 
-        console.log(data)
-        // make sure the books route is up to date
+        // go fetch all the information on the books route again
         revalidatePath('/books')
-        // moves the user to the books page after form submission
+        // redirects the user to the books route
         redirect('/books')
     }
 
     return (
-        // the callback we give to action always get formData
-        <form action={handleSubmit}>
-            <label htmlFor="title01">title</label>
-            <input name='title' placeholder="title" required id="title01" />
-            <input name='author' placeholder="author" required />
-            <input name='description' placeholder="description" required />
-            <input name='quote' placeholder="quote" required />
-            <input type='date' name='released' placeholder="released" required />
-            <input name='img_url' placeholder="img_url" required />
-            <button type="submit">submit</button>
+        // write out a form as normal
+        // give it an action to run
+        // the action is your server action
+        // the function passed as the server action will always recieve formData as an argument. (you dont need to pass form data, nextjs does this automatically)
+        <form style={{display: 'flex', flexDirection: 'column', width: '200px', alignSelf: 'center'}}
+        action={handleSubmit}
+        >
+            <input name="title" placeholder="title" required />
+            <input name="author" placeholder="author" required />
+            <input name="description" placeholder="description" required />
+            <input name="quote" placeholder="quote" required />
+            <input name="released" placeholder="released" required type="date"/>
+            <input name="img_url" placeholder="img_url" required />
+            <button type="submit">Submit</button>
         </form>
     )
 }
@@ -52,3 +58,5 @@ export default function Page() {
 //     description: 'Baz'
 //     // ect
 // }
+
+// await db.query(`INSERT INTO books (title, author, description, quote, released, img_url) VALUES ($1, $2, $3, $4, $5, $6)`, [title, author, description, quote, released, img_url])
