@@ -1,0 +1,11 @@
+/* in our module files we can only write classes */
+
+.coolText {
+    font-family: monospace;
+    color: tomato;
+    font-size: 2rem;
+}
+
+.newClass {
+    color: brown;
+}
