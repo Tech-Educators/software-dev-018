@@ -12,6 +12,7 @@ export default function Page() {
     { name: 'Ice Cream', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4F2gZidrNWH_iPuypbfzcDFKGRuy-6CaTw&s', isSoup: true}
   ]
   const [food, setFood] = useState(selectSoup())
+
   function selectSoup() {
     return foods[Math.floor(Math.random() * foods.length)]
   }
@@ -21,6 +22,7 @@ export default function Page() {
       <Image height={400} width={600} alt='random food' src={food.image} />
       <h2 className={`text-xl mt-4 ${food.isSoup ? 'text-green-400': 'text-red-400'}`}>
         {food.isSoup ? 'Yes this is soup!' : 'NO, this is NOT soup!'}
+        It's souP!
       </h2>
       <button onClick={() => setFood(selectSoup())}>new soup</button>
     </section>

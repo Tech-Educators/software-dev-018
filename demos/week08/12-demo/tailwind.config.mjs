@@ -10,6 +10,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        raisinBlack: "#191923",
+        nyanza: "#EEFCCE",
+        auburn: "#9E2A2B",
+        naplesYellow: "#F1DB4B",
+        mindaro: "#EDFF71",
       },
     },
   },

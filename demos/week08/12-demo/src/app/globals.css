@@ -19,3 +19,12 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+  /* .text-neon {
+      color: #00FFFF;
+      text-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF, 0 0 20px #00FFFF;
+  }
+  .border-neon {
+      border-color: #00FFFF;
+      box-shadow: 0 0 5px #00FFFF, 0 0 10px #00FFFF;
+  } */
