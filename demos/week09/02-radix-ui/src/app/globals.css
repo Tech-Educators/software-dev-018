@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* styles.css */
+.PopoverTrigger {
+	background-color: white;
+	border-radius: 4px;
+}
+
+.PopoverContent {
+	border-radius: 4px;
+	padding: 20px;
+	width: 260px;
+	background-color: white;
+}
+
+.PopoverArrow {
+	fill: white;
+}
