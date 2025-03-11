@@ -4,7 +4,10 @@ const myName = 'string'
 const myNumber = 54
 const myBool = true;
 
-const myArray = []
+let myArray: {name: string}[] = [{
+    name: 'hi'
+}]
+
 const myObject = {}
 
 // typscript is about striclty defining what types our varibles can be.
@@ -89,6 +92,9 @@ function sum(a: number, b: number):number {
     return a + b
 }
 
+function createPhoneNumber(arr: number[]):string {
+    return 'hi'
+}
 
 // union types
 
