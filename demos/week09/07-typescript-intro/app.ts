@@ -78,7 +78,7 @@ const pets: petInfo[] = [
 // you dont need to tell it everything 
 
 // you can be a number or a string
-let myHometown: (number | string )= 'Mossel bay'
+let myHometown: (number | string ) = 'Mossel bay'
 myHometown = 43
 
 
@@ -114,3 +114,8 @@ const myArrayOfTrees: treeTypes[] = [
 ]
 
 console.log(myArrayOfTrees)
+
+
+// try and type your create phone number function from this morning (get from the class repo)
+
+// create a new 'type' and type an array of objects 

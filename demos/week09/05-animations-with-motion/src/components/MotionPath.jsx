@@ -6,7 +6,7 @@ const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut" }
 
 export default function MotionPath() {
     return (
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative"}}>
             <svg xmlns="http://www.w3.org/2000/svg" width="451" height="437">
                 <motion.path
                     d="M150 5 L75 200 L225 200"
