@@ -8,7 +8,7 @@ export default async function Page() {
     const db = connect()
 
     // check if the user id is in our database
-    const userInfo = await db.query(`SELECT * FROM user_account WHERE clerk_id = $1`, [userId])
+    const userInfo = await db.query(`SELECT * FROM user_accounts WHERE clerk_id = $1`, [userId])
 
     if (!userId) return redirectToSignIn()
 

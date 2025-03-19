@@ -12,7 +12,7 @@ export default async function UserForm() {
         const {username, bio} = Object.fromEntries(formData)
         
         const db = connect()
-        db.query(`INSERT INTO user_account (username, bio, clerk_id) VALUES ($1, $2, $3)`, [username, bio, userId])
+        db.query(`INSERT INTO user_accounts (username, bio, clerk_id) VALUES ($1, $2, $3)`, [username, bio, userId])
 
     }
 
@@ -24,3 +24,8 @@ export default async function UserForm() {
         </form>
     )
 }
+
+// inserting a new post:
+// call auth() to get clerk's id for the currently logged in user
+// run a db query to get the YOUR id for the currently logged in user - remember clerk_id and your user table database ID are different
+// on form submit, submit the form content along with the YOUR user id. 
